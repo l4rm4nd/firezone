@@ -14,6 +14,11 @@ Firezone is a self-hosted VPN server and Linux firewall:
 - Built on [WireGuard®](https://www.wireguard.com/) to be stable, performant,
   and lightweight.
 
+> [!TIP]
+> Firezone `legacy` branch (v0.7) hit EoL on January 31st 2024.
+>
+> This fork tries to keep the dependencies up-to-date via GitHub Dependabot to fix CVEs.
+
 ![Firezone Architecture](https://user-images.githubusercontent.com/52545545/183804397-ae81ca4e-6972-41f9-80d4-b431a077119d.png)
 
 ## 💎 Features
