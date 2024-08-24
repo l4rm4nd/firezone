@@ -46,7 +46,7 @@ Firezone is **not:**
 
 Firezone can be installed via Docker and Docker Compose.
 
-A public Docker image is provided on [GHCR.IO](https://github.com/l4rm4nd/firezone/pkgs/container/firezone).
+A public Docker image is provided on [DockerHub](https://hub.docker.com/r/l4rm4nd/firezone).
 
 ````bash
 # download compose file
