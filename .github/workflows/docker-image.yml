@@ -2,7 +2,7 @@ name: Docker Build
 on:
   push:
     branches:
-      - legacy
+      - legacy-disabled
       - 'build/**'
     paths-ignore:
       - '**/README.md'
