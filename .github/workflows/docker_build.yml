@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - legacy
+      - 'build/**'      
   pull_request:
 
 permissions:
@@ -48,26 +49,30 @@ jobs:
     needs: [changelog]
     if: github.event_name != 'pull_request' && needs.changelog.outputs.skipped == 'false'
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    env:
+      REGISTRY: docker.io
+      IMAGE_NAME: firezone  
 
     steps:
+
+      - uses: actions/checkout@v3
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
 
       - name: Get repository name
         id: get_repo
         run: echo "REPO_NAME=$(echo ${{ github.repository }} | cut -d'/' -f2 | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
-
-      - name: Checkout
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
 
       - name: Login to Dockerhub
         uses: docker/login-action@v1
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-
-      - name: Setup Docker Buildx
-        uses: docker/setup-buildx-action@v2
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v2        
 
       - name: Extract version parts
         id: extract_version
@@ -85,23 +90,23 @@ jobs:
           tags: |
             latest
             ${{ needs.changelog.outputs.version }}
-            ${{ env.MAJOR_MINOR_TAG }}
+            ${{ env.MAJOR_MINOR_TAG }}            
 
       - name: Build and Push Docker Image
-        uses: docker/build-push-action@4a13e500e55cf31b7a5d59a38ab2040ab0f42f56 # v5
+        uses: docker/build-push-action@v4
         with:
           platforms: linux/amd64,linux/arm64
-          build-args: |
-            VERSION=${{ needs.draft-release.outputs.tag_name }}
           file: Dockerfile.prod
           context: .
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          build-args: |
+              VERSION=${{ needs.changelog.outputs.version }}
 
   release:
     name: Release
-    needs: [changelog]
+    needs: [changelog, deploy]
     if: github.event_name != 'pull_request' && needs.changelog.outputs.skipped == 'false'
     runs-on: ubuntu-latest
 
