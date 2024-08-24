@@ -3,7 +3,7 @@ on:
   pull_request:
   push:
     branches:
-      - legacy
+      - legacy-disabled
 
 jobs:
   unit-test:
