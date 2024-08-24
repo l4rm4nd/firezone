@@ -74,7 +74,7 @@ docker compose up -d
 
 Afterwards, the admin mgmt UI is accessible on http://127.0.0.1:13000.
 
-It is recommended to combine Firezone with a TLS reverse proxy such as Traefik as well as with an Identity Provider (IdP) such as Keycloak or Authentik for Single-Sign-On (SSO). Once SSO is enabled, you should disable the possibility for local authentication.
+It is recommended to combine Firezone with a TLS reverse proxy such as Traefik as well as with an Identity Provider (IdP) such as Keycloak or Authentik for Single-Sign-On (SSO). Once SSO is enabled, you should disable the possibility for local authentication via the `.env` file.
 
 ## ✏️ Documentation
 
