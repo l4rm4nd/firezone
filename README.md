@@ -53,7 +53,7 @@ A public Docker image is provided on [DockerHub](https://hub.docker.com/r/l4rm4n
 wget https://raw.githubusercontent.com/l4rm4nd/firezone/legacy/docker-compose.yml
 
 # generate an .env file
-docker run --rm ghcr.io/l4rm4nd/firezone:latest bin/gen-env > .env
+docker run --rm l4rm4nd/firezone:latest bin/gen-env > .env
 
 # adjust .env file to your needs
 # define EXTERNAL_URL + DEFAULT_ADMIN_EMAIL + DEFAULT_ADMIN_PASSWORD
@@ -72,9 +72,9 @@ docker compose run --rm firezone bin/create-or-reset-admin
 docker compose up -d
 ````
 
-Afterwards, the admin mgmt UI is accessible on http://127.0.0.1:13000.
+Afterwards, the admin MGMT UI is accessible at http://127.0.0.1:13000.
 
-It is recommended to combine Firezone with a TLS reverse proxy such as Traefik as well as with an Identity Provider (IdP) such as Keycloak or Authentik for Single-Sign-On (SSO). Once SSO is enabled, you should disable the possibility for local authentication via the `.env` file.
+It is recommended to combine Firezone with a TLS reverse proxy (e.g. Traefik) and with an Identity Provider (IdP) such as Keycloak or Authentik for Single-Sign-On (SSO) via OAuth/OIDC. Once SSO is enabled, you should disable local authentication via the `.env` file.
 
 ## ✏️ Documentation
 
