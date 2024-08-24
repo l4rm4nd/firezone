@@ -11,7 +11,7 @@ version: "3.7"
 services:
 
   firezone:
-    image: ghcr.io/l4rm4nd/firezone:latest
+    image: l4rm4nd/firezone:latest
     container_name: firezone-web
     ports:
       - 51820:51820/udp
