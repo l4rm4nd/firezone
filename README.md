@@ -42,7 +42,7 @@ Firezone is **not:**
 - A full-featured router
 - An IPSec or OpenVPN server
 
-## 🐋 Installation
+## 🐳 Installation
 
 Firezone can be installed via Docker and Docker Compose.
 
