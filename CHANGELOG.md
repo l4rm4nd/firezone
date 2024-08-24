@@ -1,3 +1,10 @@
+## [7.0.2](https://github.com/l4rm4nd/firezone/compare/v7.0.1...v7.0.2) (2024-08-24)
+
+
+### Bug Fixes
+
+* ci workflow ([14307c3](https://github.com/l4rm4nd/firezone/commit/14307c3e9eeb0a044bae460491d9290e5ec7001f))
+
 ## [7.0.1](https://github.com/l4rm4nd/firezone/compare/v0.1.1...v7.0.1) (2024-08-24)
 
 
