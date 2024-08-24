@@ -76,6 +76,16 @@ Afterwards, the admin MGMT UI is accessible at http://127.0.0.1:13000.
 
 It is recommended to combine Firezone with a TLS reverse proxy (e.g. Traefik) and with an Identity Provider (IdP) such as Keycloak or Authentik for Single-Sign-On (SSO) via OAuth/OIDC. Once SSO is enabled, you should disable local authentication via the `.env` file.
 
+## 🔒 Security
+
+This fork focuses on security and fixing outdated dependencies only. There will be no new features or breaking changes.
+
+The ultimate goal is to mitigate security vulnerabilities, so called CVEs. Typically introduced by the use of outdated libraries and packages. Basically to keep the selfhosted Firezone project alive.
+
+We are actively relying on GitHub Dependabot to identify and fix outdated packages. Furthermore, Docker images are scanned by Scout on Dockerhub automatically.
+
+Note that not all CVEs can be fixed or do receive a patch by the vendor. Moreover, there may be packages that cannot be upraded due to dependencies to other packages.
+
 ## ✏️ Documentation
 
 Additional documentation on general usage, troubleshooting, and configuration
