@@ -1,4 +1,11 @@
-## 0.1.0 (2024-08-24)
+## [0.1.1](https://github.com/l4rm4nd/firezone/compare/v0.1.0...v0.1.1) (2024-08-24)
+
+
+### Bug Fixes
+
+* docker compose ([eb8cf15](https://github.com/l4rm4nd/firezone/commit/eb8cf159580287d037e2b14d9238ddcda7d6250c))
+
+## [0.1.0](https://github.com/l4rm4nd/firezone/compare/2a94a76c0f6453903a070967def953a8ea02a487...v0.1.0) (2024-08-24)
 
 
 ### Features
