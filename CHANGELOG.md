@@ -1,3 +1,10 @@
+## [7.0.1](https://github.com/l4rm4nd/firezone/compare/v0.1.1...v7.0.1) (2024-08-24)
+
+
+### Bug Fixes
+
+* readme ([91bb405](https://github.com/l4rm4nd/firezone/commit/91bb405c13861ceafe156277b71fababa6d48030))
+
 ## [0.1.1](https://github.com/l4rm4nd/firezone/compare/v0.1.0...v0.1.1) (2024-08-24)
 
 
