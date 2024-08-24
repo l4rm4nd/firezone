@@ -3,7 +3,7 @@ on:
   pull_request:
   push:
     branches:
-      - legacy
+      - legacy-disabled
 
 jobs:
   static-analysis:
