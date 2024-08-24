@@ -1,3 +1,10 @@
+## [7.0.3](https://github.com/l4rm4nd/firezone/compare/v7.0.2...v7.0.3) (2024-08-24)
+
+
+### Bug Fixes
+
+* adjust version hyperlink ([1b37dd9](https://github.com/l4rm4nd/firezone/commit/1b37dd94cf863e747069ff3fd766c4f72d74533c))
+
 ## [7.0.2](https://github.com/l4rm4nd/firezone/compare/v7.0.1...v7.0.2) (2024-08-24)
 
 
