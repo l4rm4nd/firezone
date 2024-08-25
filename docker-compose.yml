@@ -33,6 +33,8 @@ services:
       - net.ipv6.conf.all.forwarding=1
     depends_on:
       - postgres
+    deploy:
+      <<: *default-deploy
     #networks:
     #  - proxy
     #  - internal-firezone
@@ -43,9 +45,6 @@ services:
     # - traefik.http.routers.firezone_https.tls=true
     # - traefik.http.services.firezone.loadbalancer.server.port=13000
     # #- traefik.http.routers.firezone.middlewares=local-ipwhitelist@file
-
-    deploy:
-      <<: *default-deploy
 
   postgres:
     image: postgres:15-alpine
