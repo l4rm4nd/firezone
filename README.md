@@ -82,7 +82,7 @@ This fork focuses on security and fixing outdated dependencies only. There will 
 
 The ultimate goal is to mitigate security vulnerabilities, so called CVEs. Typically introduced by the use of outdated libraries and packages. Basically to keep the selfhosted Firezone project alive.
 
-We are actively relying on GitHub Dependabot to identify and fix outdated packages. Furthermore, Docker images are scanned by Scout on Dockerhub automatically.
+We are actively relying on [GitHub Dependabot](https://github.com/l4rm4nd/firezone/security/dependabot) to identify and fix outdated packages. Furthermore, Docker images are scanned by Scout on Dockerhub automatically.
 
 Note that not all CVEs can be fixed or do receive a patch by the vendor. Moreover, there may be packages that cannot be upraded due to dependencies to other packages.
 
