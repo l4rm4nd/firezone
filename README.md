@@ -58,10 +58,11 @@ docker run --rm l4rm4nd/firezone:latest bin/gen-env > .env
 # adjust .env file to your needs
 # define EXTERNAL_URL + DEFAULT_ADMIN_EMAIL + DEFAULT_ADMIN_PASSWORD
 
-# disable telemetry via .env
+# disable telemetry (default: true)
 echo -e "\nTELEMETRY_ENABLED=false" >> .env
-
-# enable local auth
+# enable wan connectivity checks (default: true)
+echo -e "\nCONNECTIVITY_CHECKS_ENABLED=true" >> .env
+# enable local auth (default: true)
 echo -e "\nLOCAL_AUTH_ENABLED=true" >> .env
 
 # migrate database and create admin user
