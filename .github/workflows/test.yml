@@ -36,7 +36,7 @@ jobs:
         with:
           otp-version: '25'
           elixir-version: '1.14'
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         name: Elixir Deps Cache
         env:
           cache-name: cache-elixir-deps-${{ env.MIX_ENV }}
@@ -45,7 +45,7 @@ jobs:
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/mix.lock') }}
           restore-keys: |
             ${{ runner.os }}-${{ env.cache-name }}-
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         name: Elixir Build Cache
         env:
           cache-name: cache-elixir-build-${{ env.MIX_ENV }}
@@ -86,7 +86,7 @@ jobs:
         with:
           otp-version: '25'
           elixir-version: '1.14'
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         name: Elixir Deps Cache
         env:
           cache-name: cache-elixir-deps-${{ env.MIX_ENV }}
@@ -95,7 +95,7 @@ jobs:
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/mix.lock') }}
           restore-keys: |
             ${{ runner.os }}-${{ env.cache-name }}-
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         name: Elixir Build Cache
         env:
           cache-name: cache-elixir-build-${{ env.MIX_ENV }}
@@ -111,7 +111,7 @@ jobs:
       # Don't cache PLTs based on mix.lock hash, as Dialyzer can incrementally update even old ones
       # Cache key based on Elixir & Erlang version (also useful when running in matrix)
       - name: Restore PLT cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         env:
           cache-name: cache-erlang-plt-${{ env.MIX_ENV }}
         with:
@@ -135,7 +135,7 @@ jobs:
         with:
           otp-version: '25'
           elixir-version: '1.14'
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         name: Elixir Deps Cache
         env:
           cache-name: cache-elixir-deps-${{ env.MIX_ENV }}
@@ -144,7 +144,7 @@ jobs:
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/mix.lock') }}
           restore-keys: |
             ${{ runner.os }}-${{ env.cache-name }}-
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         name: Elixir Build Cache
         env:
           cache-name: cache-elixir-build-${{ env.MIX_ENV }}
@@ -196,7 +196,7 @@ jobs:
         with:
           otp-version: '25'
           elixir-version: '1.14'
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         name: Elixir Deps Cache
         env:
           cache-name: cache-elixir-deps-${{ env.MIX_ENV }}-${{ env.MIX_ENV }}
@@ -205,7 +205,7 @@ jobs:
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/mix.lock') }}
           restore-keys: |
             ${{ runner.os }}-${{ env.cache-name }}-
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         name: Elixir Build Cache
         env:
           cache-name: cache-elixir-build-${{ env.MIX_ENV }}
@@ -317,7 +317,7 @@ jobs:
         with:
           otp-version: '25'
           elixir-version: '1.14'
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         name: Elixir Deps Cache
         env:
           cache-name: cache-elixir-deps-${{ env.MIX_ENV }}-${{ env.MIX_ENV }}
@@ -326,21 +326,21 @@ jobs:
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/mix.lock') }}
           restore-keys: |
             ${{ runner.os }}-${{ env.cache-name }}-
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         name: Elixir Build Cache
         env:
           cache-name: cache-elixir-build-${{ env.MIX_ENV }}
         with:
           path: _build
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/mix.lock') }}
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         name: Yarn Deps Cache
         env:
           cache-name: cache-yarn-build-${{ env.MIX_ENV }}
         with:
           path: apps/fz_http/assets/node_modules
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         name: Assets Cache
         env:
           cache-name: cache-assets-build-${{ env.MIX_ENV }}
