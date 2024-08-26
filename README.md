@@ -66,8 +66,8 @@ echo -e "\nCONNECTIVITY_CHECKS_ENABLED=true" >> .env
 echo -e "\nLOCAL_AUTH_ENABLED=true" >> .env
 
 # migrate database and create admin user
-docker compose run --rm l4rm4nd/firezone bin/migrate
-docker compose run --rm l4rm4nd/firezone bin/create-or-reset-admin
+docker compose run --rm firezone bin/migrate
+docker compose run --rm firezone bin/create-or-reset-admin
 
 # spawn the container stack
 docker compose up -d
