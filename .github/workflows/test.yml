@@ -31,7 +31,7 @@ jobs:
           sudo apt-get install -q -y \
             net-tools \
             wireguard
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: erlef/setup-beam@v1
         with:
           otp-version: '25'
@@ -81,7 +81,7 @@ jobs:
       MIX_ENV: dev
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: erlef/setup-beam@v1
         with:
           otp-version: '25'
@@ -130,7 +130,7 @@ jobs:
       MIX_ENV: test
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: erlef/setup-beam@v1
         with:
           otp-version: '25'
@@ -191,7 +191,7 @@ jobs:
             net-tools \
             wireguard \
             postgresql-client
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: erlef/setup-beam@v1
         with:
           otp-version: '25'
@@ -312,7 +312,7 @@ jobs:
           sudo apt-get install -q -y \
             net-tools \
             wireguard
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: erlef/setup-beam@v1
         with:
           otp-version: '25'
