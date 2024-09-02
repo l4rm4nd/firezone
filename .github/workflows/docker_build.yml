@@ -93,7 +93,7 @@ jobs:
             ${{ env.MAJOR_MINOR_TAG }}            
 
       - name: Build and Push Docker Image
-        uses: docker/build-push-action@v4
+        uses: docker/build-push-action@v6
         with:
           platforms: linux/amd64,linux/arm64
           file: Dockerfile.prod
