@@ -251,7 +251,7 @@ jobs:
             --no-owner
       - name: Upload legacy branch DB dump
         if: "contains(github.ref, 'legacy')"
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: db-dump
           path: apps/fz_http/priv/repo/structure.sql
@@ -381,7 +381,7 @@ jobs:
               || mix test --only acceptance:true --failed
       - name: Save Screenshots
         if: ${{ github.event.pull_request.head.repo.full_name == github.repository && always() }}
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: screenshots
           path: apps/fz_http/screenshots
