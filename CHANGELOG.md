@@ -1,3 +1,10 @@
+## [7.0.6](https://github.com/l4rm4nd/firezone/compare/v7.0.5...v7.0.6) (2024-11-01)
+
+
+### Bug Fixes
+
+* trigger manual ci build ([1cb034d](https://github.com/l4rm4nd/firezone/commit/1cb034dd6edc058c922316c35160fea616658aa5))
+
 ## [7.0.5](https://github.com/l4rm4nd/firezone/compare/v7.0.4...v7.0.5) (2024-11-01)
 
 
@@ -25,11 +32,4 @@
 ### Bug Fixes
 
 * ci workflow ([14307c3](https://github.com/l4rm4nd/firezone/commit/14307c3e9eeb0a044bae460491d9290e5ec7001f))
-
-## [7.0.1](https://github.com/l4rm4nd/firezone/compare/v0.1.1...v7.0.1) (2024-08-24)
-
-
-### Bug Fixes
-
-* readme ([91bb405](https://github.com/l4rm4nd/firezone/commit/91bb405c13861ceafe156277b71fababa6d48030))
 
