@@ -1,4 +1,4 @@
-# macOS cruft files
+# macOS cruft
 .DS_Store
 
 priv/pki/authorities/local/
