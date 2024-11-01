@@ -1,3 +1,10 @@
+## [7.0.5](https://github.com/l4rm4nd/firezone/compare/v7.0.4...v7.0.5) (2024-11-01)
+
+
+### Bug Fixes
+
+* trigger ci pipeline manually ([1bb9b0c](https://github.com/l4rm4nd/firezone/commit/1bb9b0c1e3459fc313e9754312542d5cd5ae3f6a))
+
 ## [7.0.4](https://github.com/l4rm4nd/firezone/compare/v7.0.3...v7.0.4) (2024-08-24)
 
 
@@ -25,11 +32,4 @@
 ### Bug Fixes
 
 * readme ([91bb405](https://github.com/l4rm4nd/firezone/commit/91bb405c13861ceafe156277b71fababa6d48030))
-
-## [0.1.1](https://github.com/l4rm4nd/firezone/compare/v0.1.0...v0.1.1) (2024-08-24)
-
-
-### Bug Fixes
-
-* docker compose ([eb8cf15](https://github.com/l4rm4nd/firezone/commit/eb8cf159580287d037e2b14d9238ddcda7d6250c))
 
