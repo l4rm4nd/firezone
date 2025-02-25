@@ -4,7 +4,7 @@
     <p>Fork of <a href="https://github.com/firezone/firezone/tree/legacy">Firezone 0.7</a><br>
 </div>
 
-## 💡 Description
+## 💡 Description 
 
 Firezone is a self-hosted VPN server and Linux firewall:
 
