@@ -15,7 +15,7 @@ Firezone is a self-hosted VPN server and Linux firewall:
   and lightweight.
 
 > [!TIP]
-> Firezone `legacy` branch (v0.7) hit EoL on January 31st 2024.
+> Firezone `legacy` branch (v0.7) hit EoL on January 31st 2024. 
 >
 > This fork tries to keep the dependencies up-to-date via GitHub Dependabot to fix CVEs. It starts with a new v7.0.0 version tag.
 
