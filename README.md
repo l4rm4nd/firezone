@@ -1,6 +1,6 @@
 <div align="center" width="100%">
     <h1>🔥 Firezone 🔥</h1>
-    <p>Enterprise-ready zero-trust access platform built on WireGuard®.</p><p>
+    <p>Enterprise-ready zero-trust access platform built on WireGuard®</p><p>
     <p>Fork of <a href="https://github.com/firezone/firezone/tree/legacy">Firezone 0.7</a><br>
 </div>
 
