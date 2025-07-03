@@ -99,4 +99,4 @@ can be found at [https://docs.firezone.dev](https://docs.firezone.dev).
 
 See [LICENSE](LICENSE).
 
-WireGuard® is a registered trademark of Jason A. Donenfeld.
+WireGuard® is a registered trademark of Jason A. Donenfeld. 
