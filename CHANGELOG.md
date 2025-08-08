@@ -1,3 +1,10 @@
+## [7.0.17](https://github.com/l4rm4nd/firezone/compare/v7.0.16...v7.0.17) (2025-08-08)
+
+
+### Bug Fixes
+
+* trigger ci ([6e916a5](https://github.com/l4rm4nd/firezone/commit/6e916a521b5461e039d49687109c4db7215a733e))
+
 ## [7.0.16](https://github.com/l4rm4nd/firezone/compare/v7.0.15...v7.0.16) (2025-07-03)
 
 
@@ -25,11 +32,4 @@
 ### Bug Fixes
 
 * trigger ci to fix nextjs cve ([6da3738](https://github.com/l4rm4nd/firezone/commit/6da3738609c25487b9c0a9dffd00f9f0e46a4a3a))
-
-## [7.0.12](https://github.com/l4rm4nd/firezone/compare/v7.0.11...v7.0.12) (2025-03-11)
-
-
-### Bug Fixes
-
-* Trigger ci ([f44bed3](https://github.com/l4rm4nd/firezone/commit/f44bed34a791efd5af132ff0b7cf93a38070db7b))
 
