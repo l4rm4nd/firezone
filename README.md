@@ -19,7 +19,7 @@ Firezone is a self-hosted VPN server and Linux firewall:
 >
 > This fork tries to keep the dependencies up-to-date via GitHub Dependabot to fix CVEs. It starts with a new v7.0.0 version tag.
 
-![Firezone Architecture](https://user-images.githubusercontent.com/52545545/183804397-ae81ca4e-6972-41f9-80d4-b431a077119d.png)
+![Firezone Architecture](https://user-images.githubusercontent.com/52545545/183804397-ae81ca4e-6972-41f9-80d4-b431a077119d.png) 
 
 ## 💎 Features
 
