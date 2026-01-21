@@ -565,8 +565,8 @@ packages:
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
 
-  baseline-browser-mapping@2.9.16:
-    resolution: {integrity: sha512-KeUZdBuxngy825i8xvzaK1Ncnkx0tBmb3k8DkEuqjKRkmtvNTjey2ZsNeh8Dw4lfKvbCOu9oeNx2TKm2vHqcRw==}
+  baseline-browser-mapping@2.9.17:
+    resolution: {integrity: sha512-agD0MgJFUP/4nvjqzIB29zRPUuCF7Ge6mEv9s8dHrtYD7QWXRcx75rOADE/d5ah1NI+0vkDl0yorDd5U852IQQ==}
     hasBin: true
 
   binary-extensions@2.2.0:
@@ -1557,8 +1557,8 @@ packages:
     peerDependencies:
       seroval: ^1.0
 
-  seroval@1.2.1:
-    resolution: {integrity: sha512-yBxFFs3zmkvKNmR0pFSU//rIsYjuX418TnlDmc2weaq5XFDqDIV/NOMPBoLrbxjLH42p4UzRuXHryXh9dYcKcw==}
+  seroval@1.4.2:
+    resolution: {integrity: sha512-N3HEHRCZYn3cQbsC4B5ldj9j+tHdf4JZoYPlcI4rRYu0Xy4qN8MQf1Z08EibzB0WpgRG5BGK08FTrmM66eSzKQ==}
     engines: {node: '>=10'}
 
   solid-js@1.9.5:
@@ -2288,7 +2288,7 @@ snapshots:
 
   balanced-match@1.0.2: {}
 
-  baseline-browser-mapping@2.9.16: {}
+  baseline-browser-mapping@2.9.17: {}
 
   binary-extensions@2.2.0: {}
 
@@ -2310,7 +2310,7 @@ snapshots:
 
   browserslist@4.28.1:
     dependencies:
-      baseline-browser-mapping: 2.9.16
+      baseline-browser-mapping: 2.9.17
       caniuse-lite: 1.0.30001765
       electron-to-chromium: 1.5.267
       node-releases: 2.0.27
@@ -3595,17 +3595,17 @@ snapshots:
     dependencies:
       randombytes: 2.1.0
 
-  seroval-plugins@1.2.1(seroval@1.2.1):
+  seroval-plugins@1.2.1(seroval@1.4.2):
     dependencies:
-      seroval: 1.2.1
+      seroval: 1.4.2
 
-  seroval@1.2.1: {}
+  seroval@1.4.2: {}
 
   solid-js@1.9.5:
     dependencies:
       csstype: 3.1.2
-      seroval: 1.2.1
-      seroval-plugins: 1.2.1(seroval@1.2.1)
+      seroval: 1.4.2
+      seroval-plugins: 1.2.1(seroval@1.4.2)
 
   source-map-js@1.0.2: {}
 
