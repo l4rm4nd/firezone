@@ -1,3 +1,10 @@
+## [7.0.24](https://github.com/l4rm4nd/firezone/compare/v7.0.23...v7.0.24) (2026-01-21)
+
+
+### Bug Fixes
+
+* trigger ci ([c151515](https://github.com/l4rm4nd/firezone/commit/c15151598ac5ddfa5c49dd95d9ddf32ea56299b1))
+
 ## [7.0.23](https://github.com/l4rm4nd/firezone/compare/v7.0.22...v7.0.23) (2026-01-21)
 
 
@@ -25,11 +32,4 @@
 ### Bug Fixes
 
 * trigger ci ([26c2fe7](https://github.com/l4rm4nd/firezone/commit/26c2fe7adaedcda2e53cb69078a0e8d2c4b4ea15))
-
-## [7.0.19](https://github.com/l4rm4nd/firezone/compare/v7.0.18...v7.0.19) (2025-10-13)
-
-
-### Bug Fixes
-
-* trigger ci ([fec4ab7](https://github.com/l4rm4nd/firezone/commit/fec4ab7e0a5abaa717cf85dbc2023b1523d01036))
 
