@@ -13,8 +13,8 @@ RUN apk add nodejs npm build-base git python3
 WORKDIR /app
 
 # install hex + rebar
-RUN mix local.hex --force && \
-    mix local.rebar --force
+RUN mix local.hex --force --if-missing && \
+    mix local.rebar --force --if-missing
 
 # set build ENV
 ENV MIX_ENV="prod"

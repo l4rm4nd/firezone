@@ -64,10 +64,10 @@ defmodule FzHttp.Config.Validator do
   def validate(key, value, type, opts) do
     callback = Keyword.get(opts, :changeset, fn changeset, _key -> changeset end)
 
-    # Handle parameterized types by calling Ecto.Type directly
+    # Handle parameterized types by calling the module's cast function directly
     case type do
       {:parameterized, module, params} ->
-        case Ecto.Type.cast(module, value, params) do
+        case apply(module, :cast, [value, params]) do
           {:ok, casted_value} -> {:ok, casted_value}
           :error -> {:error, {value, ["is invalid"]}}
           {:error, reason} -> {:error, {value, [to_string(reason)]}}
