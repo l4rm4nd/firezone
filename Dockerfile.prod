@@ -1,14 +1,14 @@
-ARG ELIXIR_VERSION=1.14.3
-ARG OTP_VERSION=25.2.1
-ARG ALPINE_VERSION=3.16.3
+ARG ELIXIR_VERSION=1.17.3
+ARG OTP_VERSION=27
+ARG ALPINE_VERSION=3.19
 
-ARG BUILDER_IMAGE="firezone/elixir:${ELIXIR_VERSION}-otp-${OTP_VERSION}"
+ARG BUILDER_IMAGE="hexpm/elixir:${ELIXIR_VERSION}-erlang-${OTP_VERSION}.0-alpine-${ALPINE_VERSION}.2"
 ARG RUNNER_IMAGE="alpine:${ALPINE_VERSION}"
 
 FROM ${BUILDER_IMAGE} as builder
 
 # install build dependencies
-RUN apk add nodejs yarn build-base git python3
+RUN apk add nodejs npm build-base git python3
 
 # prepare build dir
 WORKDIR /app
@@ -44,8 +44,8 @@ ENV VERSION=$VERSION
 
 # compile assets
 RUN cd apps/fz_http/assets \
-    && yarn install --frozen-lockfile \
-    && yarn deploy \
+    && npm ci \
+    && npm run deploy \
     && cd .. \
     && mix phx.digest
 

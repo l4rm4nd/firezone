@@ -1,10 +1,10 @@
 # This Dockerfile builds a development image to use for local development work
 
-FROM firezone/elixir:1.14.3-otp-25.2.1
+FROM hexpm/elixir:1.17.3-erlang-27.0-alpine-3.19.2
 
 # Install dev dependencies / convenience tools
 RUN apk add \
-    yarn \
+    npm \
     build-base \
     git \
     python3 \
@@ -48,8 +48,8 @@ RUN mix do deps.get, deps.compile, compile
 # busting the Docker build cache unnecessarily
 COPY apps/fz_http/assets/package.json /var/app/apps/fz_http/assets/package.json
 COPY apps/fz_http/assets/local_modules /var/app/apps/fz_http/assets/local_modules
-COPY apps/fz_http/assets/yarn.lock /var/app/apps/fz_http/assets/yarn.lock
-RUN cd apps/fz_http/assets && yarn install
+COPY apps/fz_http/assets/package-lock.json /var/app/apps/fz_http/assets/package-lock.json
+RUN cd apps/fz_http/assets && npm ci
 
 COPY config /var/app/config
 COPY apps /var/app/apps
