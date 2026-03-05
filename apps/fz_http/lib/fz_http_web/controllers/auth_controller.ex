@@ -63,11 +63,21 @@ defmodule FzHttpWeb.AuthController do
       when is_binary(provider_id) do
     with :ok <- State.verify_state(conn, state),
          {:ok, config} <- Auth.fetch_oidc_provider_config(provider_id) do
+      # Build token request parameters with proper OAuth2 format
+      # Convert PKCE params to string keys for consistency
+      pkce_params =
+        conn
+        |> PKCE.token_params()
+        |> Enum.map(fn {k, v} -> {to_string(k), v} end)
+        |> Map.new()
+
       token_params =
-        params
-        |> Map.merge(PKCE.token_params(conn))
-        |> Map.put("grant_type", "authorization_code")
-        |> Map.put("redirect_uri", config.redirect_uri)
+        %{
+          "code" => params["code"],
+          "grant_type" => "authorization_code",
+          "redirect_uri" => config.redirect_uri
+        }
+        |> Map.merge(pkce_params)
 
       case OpenIDConnect.fetch_tokens(config, token_params) do
         {:ok, tokens} ->
