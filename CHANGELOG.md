@@ -1,3 +1,10 @@
+## [7.1.3](https://github.com/l4rm4nd/firezone/compare/v7.1.2...v7.1.3) (2026-03-05)
+
+
+### Bug Fixes
+
+* use official elixir Docker image instead of hexpm/elixir ([a5b905e](https://github.com/l4rm4nd/firezone/commit/a5b905e820a66d347fceede326a4db0c2f43f5ee))
+
 ## [7.1.2](https://github.com/l4rm4nd/firezone/compare/v7.1.1...v7.1.2) (2026-03-05)
 
 
@@ -25,11 +32,4 @@
 ### Bug Fixes
 
 * trigger ci ([41272fb](https://github.com/l4rm4nd/firezone/commit/41272fba11c1625b2ffbce102fb7befbd72ee64b))
-
-## [7.0.24](https://github.com/l4rm4nd/firezone/compare/v7.0.23...v7.0.24) (2026-01-21)
-
-
-### Bug Fixes
-
-* trigger ci ([c151515](https://github.com/l4rm4nd/firezone/commit/c15151598ac5ddfa5c49dd95d9ddf32ea56299b1))
 
