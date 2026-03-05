@@ -1,3 +1,10 @@
+## [7.1.17](https://github.com/l4rm4nd/firezone/compare/v7.1.16...v7.1.17) (2026-03-05)
+
+
+### Bug Fixes
+
+* openid_connect ([4fcdf2c](https://github.com/l4rm4nd/firezone/commit/4fcdf2c0d0168445c1bc11b945ecaf7505920708))
+
 ## [7.1.16](https://github.com/l4rm4nd/firezone/compare/v7.1.15...v7.1.16) (2026-03-05)
 
 
@@ -25,11 +32,4 @@
 ### Bug Fixes
 
 * openid_connect ([0b403d5](https://github.com/l4rm4nd/firezone/commit/0b403d54a998551ad141d2649b085ef06583c14d))
-
-## [7.1.12](https://github.com/l4rm4nd/firezone/compare/v7.1.11...v7.1.12) (2026-03-05)
-
-
-### Bug Fixes
-
-* jason for openid_connect ([854543a](https://github.com/l4rm4nd/firezone/commit/854543a6b0a3beb9a55ceef91d95900b0a041a47))
 
