@@ -1,3 +1,10 @@
+## [7.1.14](https://github.com/l4rm4nd/firezone/compare/v7.1.13...v7.1.14) (2026-03-05)
+
+
+### Bug Fixes
+
+* openid_connect grant type ([eba6d3b](https://github.com/l4rm4nd/firezone/commit/eba6d3b1cc6cb80a43d5670b133f5fc4f024e357))
+
 ## [7.1.13](https://github.com/l4rm4nd/firezone/compare/v7.1.12...v7.1.13) (2026-03-05)
 
 
@@ -25,11 +32,4 @@
 ### Bug Fixes
 
 * sync dockerfile stages openssl ([d3625e5](https://github.com/l4rm4nd/firezone/commit/d3625e5a1555f1ca9767f18fef389aca9933f238))
-
-## [7.1.9](https://github.com/l4rm4nd/firezone/compare/v7.1.8...v7.1.9) (2026-03-05)
-
-
-### Bug Fixes
-
-* sync dockerfile stages openssl ([93fb50c](https://github.com/l4rm4nd/firezone/commit/93fb50c1c8549660e6822e13c23443d74ac829af))
 
