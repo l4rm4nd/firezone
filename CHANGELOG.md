@@ -1,3 +1,10 @@
+## [7.1.2](https://github.com/l4rm4nd/firezone/compare/v7.1.1...v7.1.2) (2026-03-05)
+
+
+### Bug Fixes
+
+* update Dockerfiles for Elixir 1.17.3, Erlang 27, and npm ([d7a09d1](https://github.com/l4rm4nd/firezone/commit/d7a09d1e3e390f42b5c1432432b2197b015b653c))
+
 ## [7.1.1](https://github.com/l4rm4nd/firezone/compare/v7.1.0...v7.1.1) (2026-03-05)
 
 
@@ -25,11 +32,4 @@
 ### Bug Fixes
 
 * trigger ci ([c151515](https://github.com/l4rm4nd/firezone/commit/c15151598ac5ddfa5c49dd95d9ddf32ea56299b1))
-
-## [7.0.23](https://github.com/l4rm4nd/firezone/compare/v7.0.22...v7.0.23) (2026-01-21)
-
-
-### Bug Fixes
-
-* trigger ci ([5402edd](https://github.com/l4rm4nd/firezone/commit/5402edd256abf357a070bbc21e2c613706d601f8))
 
