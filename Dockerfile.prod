@@ -8,7 +8,7 @@ ARG RUNNER_IMAGE="alpine:${ALPINE_VERSION}"
 FROM ${BUILDER_IMAGE} as builder
 
 # install build dependencies
-RUN apk add nodejs npm build-base git python3
+RUN apk add nodejs npm build-base git python3 openssl-dev
 
 # prepare build dir
 WORKDIR /app
@@ -67,8 +67,7 @@ RUN apk add -u --no-cache \
     nftables \
     libstdc++ \
     ncurses-libs \
-    so:libcrypto.so.3 \
-    so:libssl.so.3
+    openssl
 
 WORKDIR /app
 
