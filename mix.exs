@@ -56,14 +56,14 @@ defmodule FirezoneUmbrella.MixProject do
   defp deps do
     [
       # Shared deps
-      {:jason, "~> 1.2"},
+      {:jason, "~> 1.4"},
 
       # Shared test deps
-      {:excoveralls, "~> 0.14", only: :test},
-      {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
-      {:mix_test_watch, "~> 1.0", only: :dev, runtime: false},
-      {:dialyxir, "~> 1.1", only: [:dev], runtime: false},
-      {:junit_formatter, "~> 3.3", only: [:test]},
+      {:excoveralls, "~> 0.17", only: :test},
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
+      {:mix_test_watch, "~> 1.4", only: :dev, runtime: false},
+      {:dialyxir, "~> 1.4", only: [:dev], runtime: false},
+      {:junit_formatter, "~> 3.4", only: [:test]},
 
       # Formatter doesn't track dependencies of children applications
       {:phoenix, "~> 1.7.0"},

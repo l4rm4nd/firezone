@@ -40,7 +40,7 @@ defmodule FzVpn.MixProject do
   defp deps do
     [
       {:fz_http, in_umbrella: true},
-      {:wireguardex, "~> 0.3.5"}
+      {:wireguardex, "~> 0.4.0"}
     ]
   end
 end

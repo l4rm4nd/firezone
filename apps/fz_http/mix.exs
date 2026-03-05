@@ -47,53 +47,53 @@ defmodule FzHttp.MixProject do
   defp deps do
     [
       # Phoenix/Plug deps
-      {:plug, "~> 1.13"},
-      {:plug_cowboy, "~> 2.5"},
+      {:plug, "~> 1.19"},
+      {:plug_cowboy, "~> 2.8"},
       {:phoenix, "~> 1.7.0"},
-      {:phoenix_ecto, "~> 4.4"},
+      {:phoenix_ecto, "~> 4.7"},
       {:phoenix_html, "~> 3.2"},
-      {:phoenix_pubsub, "~> 2.0"},
+      {:phoenix_pubsub, "~> 2.2"},
       {:phoenix_live_view, "~> 0.18.8"},
       {:phoenix_live_dashboard, "~> 0.7.2"},
-      {:phoenix_live_reload, "~> 1.3", only: :dev},
-      {:phoenix_swoosh, "~> 1.0"},
+      {:phoenix_live_reload, "~> 1.6", only: :dev},
+      {:phoenix_swoosh, "~> 1.2"},
       {:gettext, "~> 0.18"},
       {:file_size, "~> 3.0.1"},
 
       # Ecto-related deps
       {:postgrex, "~> 0.16"},
-      {:decimal, "~> 2.0"},
-      {:ecto_sql, "~> 3.7"},
+      {:decimal, "~> 2.3"},
+      {:ecto_sql, "~> 3.13"},
       {:cloak, "~> 1.1"},
-      {:cloak_ecto, "~> 1.2"},
+      {:cloak_ecto, "~> 1.3"},
 
       # Auth-related deps
-      {:guardian, "~> 2.0"},
+      {:guardian, "~> 2.4"},
       {:guardian_db, "~> 2.0"},
       {:openid_connect, github: "firezone/openid_connect"},
       # XXX: All github deps should use ref instead of always updating from master branch
       {:esaml, github: "firezone/esaml", override: true},
       {:samly, github: "firezone/samly"},
-      {:ueberauth, "~> 0.7"},
+      {:ueberauth, "~> 0.10"},
       {:ueberauth_identity, "~> 0.4"},
       {:argon2_elixir, "~> 2.0"},
       {:nimble_totp, "~> 1.0"},
 
       # Other deps
-      {:remote_ip, "~> 1.0"},
-      {:telemetry, "~> 1.0"},
+      {:remote_ip, "~> 1.2"},
+      {:telemetry, "~> 1.3"},
       # Used in Swoosh SMTP adapter
-      {:gen_smtp, "~> 1.0"},
+      {:gen_smtp, "~> 1.3"},
       {:posthog, "~> 0.1"},
 
       # Runtime debugging
       {:recon, "~> 2.5"},
-      {:observer_cli, "~> 1.7"},
+      {:observer_cli, "~> 1.8"},
 
       # Test and dev deps
       {:bypass, "~> 2.1", only: :test},
-      {:wallaby, "~> 0.30.0", only: :test},
-      {:bureaucrat, "~> 0.2.9", only: :test},
+      {:wallaby, "~> 0.30.12", only: :test},
+      {:bureaucrat, "~> 0.2.10", only: :test},
       {:floki, "~> 0.34.0"}
     ]
   end

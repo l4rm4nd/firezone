@@ -1,0 +1,39 @@
+version: "3.7"
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: firezone-db-dev
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: firezone_dev
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  firezone:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: firezone-dev
+    ports:
+      - "13000:13000"
+    environment:
+      DATABASE_NAME: firezone_dev
+      DATABASE_USER: postgres
+      DATABASE_PASSWORD: postgres
+      DATABASE_HOST: postgres
+      DATABASE_PORT: 5432
+      MIX_ENV: dev
+    volumes:
+      - .:/app
+      - /app/deps
+      - /app/_build    
+    depends_on:
+      - postgres
+    command: mix phx.server
+
+volumes:
+  postgres_data:

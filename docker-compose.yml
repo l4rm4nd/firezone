@@ -49,6 +49,8 @@ services:
   postgres:
     image: postgres:15-alpine
     container_name: firezone-db
+    ports:
+      - "5433:5432"
     volumes:
       - ${DOCKER_VOLUME_STORAGE:-/mnt/docker-volumes}/firezone/db:/var/lib/postgresql/data
     environment:

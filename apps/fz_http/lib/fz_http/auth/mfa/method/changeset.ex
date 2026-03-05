@@ -30,7 +30,7 @@ defmodule FzHttp.Auth.MFA.Method.Changeset do
   end
 
   defp use_code(changeset) do
-    if changed?(changeset, :code) and not has_errors?(changeset, :code) do
+    if Ecto.Changeset.changed?(changeset, :code) and not has_errors?(changeset, :code) do
       validate_code(changeset)
     else
       changeset
