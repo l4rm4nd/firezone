@@ -1,3 +1,10 @@
+## [7.1.11](https://github.com/l4rm4nd/firezone/compare/v7.1.10...v7.1.11) (2026-03-05)
+
+
+### Bug Fixes
+
+* jason for openid_connect ([b3f5d57](https://github.com/l4rm4nd/firezone/commit/b3f5d57bd67c84d8a1ced61d64e75b0507508a3c))
+
 ## [7.1.10](https://github.com/l4rm4nd/firezone/compare/v7.1.9...v7.1.10) (2026-03-05)
 
 
@@ -25,11 +32,4 @@
 ### Bug Fixes
 
 * bump alpine to support latest openssl ([fa4becb](https://github.com/l4rm4nd/firezone/commit/fa4becb9dd5364b719c199ed7cd27ab7c6ab29b1))
-
-## [7.1.6](https://github.com/l4rm4nd/firezone/compare/v7.1.5...v7.1.6) (2026-03-05)
-
-
-### Bug Fixes
-
-* validation errors ([7e2ca95](https://github.com/l4rm4nd/firezone/commit/7e2ca95b9fbd477b79b52fab68df2e402c272894))
 
