@@ -170,7 +170,7 @@ defmodule FzHttpWeb.AuthController do
     }
 
     with {:ok, config} <- Auth.fetch_oidc_provider_config(provider_id),
-         {:ok, uri} <- OpenIDConnect.authorization_uri(config, params) do
+         {:ok, uri} <- OpenIDConnect.authorization_uri(config, config.redirect_uri, params) do
       conn
       |> PKCE.put_cookie(verifier)
       |> State.put_cookie(params.state)
