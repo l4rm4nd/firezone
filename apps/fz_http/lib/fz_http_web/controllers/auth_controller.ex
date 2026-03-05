@@ -61,7 +61,10 @@ defmodule FzHttpWeb.AuthController do
 
   def oidc_callback(conn, %{"provider" => provider_id, "state" => state} = params)
       when is_binary(provider_id) do
-    token_params = Map.merge(params, PKCE.token_params(conn))
+    token_params =
+      params
+      |> Map.merge(PKCE.token_params(conn))
+      |> Map.put("grant_type", "authorization_code")
 
     with :ok <- State.verify_state(conn, state),
          {:ok, config} <- Auth.fetch_oidc_provider_config(provider_id),
