@@ -1,3 +1,10 @@
+## [7.1.13](https://github.com/l4rm4nd/firezone/compare/v7.1.12...v7.1.13) (2026-03-05)
+
+
+### Bug Fixes
+
+* openid_connect ([0b403d5](https://github.com/l4rm4nd/firezone/commit/0b403d54a998551ad141d2649b085ef06583c14d))
+
 ## [7.1.12](https://github.com/l4rm4nd/firezone/compare/v7.1.11...v7.1.12) (2026-03-05)
 
 
@@ -25,11 +32,4 @@
 ### Bug Fixes
 
 * sync dockerfile stages openssl ([93fb50c](https://github.com/l4rm4nd/firezone/commit/93fb50c1c8549660e6822e13c23443d74ac829af))
-
-## [7.1.8](https://github.com/l4rm4nd/firezone/compare/v7.1.7...v7.1.8) (2026-03-05)
-
-
-### Bug Fixes
-
-* bump alpine to support latest openssl ([b6a33aa](https://github.com/l4rm4nd/firezone/commit/b6a33aa962469be09184f03de7041db466c054bf))
 
