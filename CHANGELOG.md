@@ -1,3 +1,10 @@
+## [7.1.1](https://github.com/l4rm4nd/firezone/compare/v7.1.0...v7.1.1) (2026-03-05)
+
+
+### Bug Fixes
+
+* add flash message rendering to admin layout ([5ee19c3](https://github.com/l4rm4nd/firezone/commit/5ee19c39195fc5148de422386f97cd9fda05476c))
+
 ## [7.1.0](https://github.com/l4rm4nd/firezone/compare/v7.0.25...v7.1.0) (2026-03-05)
 
 
@@ -25,11 +32,4 @@
 ### Bug Fixes
 
 * trigger ci ([5402edd](https://github.com/l4rm4nd/firezone/commit/5402edd256abf357a070bbc21e2c613706d601f8))
-
-## [7.0.22](https://github.com/l4rm4nd/firezone/compare/v7.0.21...v7.0.22) (2026-01-17)
-
-
-### Bug Fixes
-
-* trigger ci ([effc764](https://github.com/l4rm4nd/firezone/commit/effc7641af5c6dd2e60abbc0cfd02c7b04a0359c))
 
