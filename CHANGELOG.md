@@ -1,3 +1,10 @@
+## [7.1.0](https://github.com/l4rm4nd/firezone/compare/v7.0.25...v7.1.0) (2026-03-05)
+
+
+### Features
+
+* dependency upgrades; workflow test fixes ([993583a](https://github.com/l4rm4nd/firezone/commit/993583a555293d31ce4f96745937071f33852f05))
+
 ## [7.0.25](https://github.com/l4rm4nd/firezone/compare/v7.0.24...v7.0.25) (2026-01-27)
 
 
@@ -25,11 +32,4 @@
 ### Bug Fixes
 
 * trigger ci ([effc764](https://github.com/l4rm4nd/firezone/commit/effc7641af5c6dd2e60abbc0cfd02c7b04a0359c))
-
-## [7.0.21](https://github.com/l4rm4nd/firezone/compare/v7.0.20...v7.0.21) (2025-12-19)
-
-
-### Bug Fixes
-
-* trigger ci ([df3158d](https://github.com/l4rm4nd/firezone/commit/df3158dd4feb61073db076f52cb14ffffa27a8e6))
 
