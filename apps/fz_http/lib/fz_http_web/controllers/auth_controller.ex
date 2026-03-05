@@ -69,27 +69,47 @@ defmodule FzHttpWeb.AuthController do
         |> Map.put("grant_type", "authorization_code")
         |> Map.put("redirect_uri", config.redirect_uri)
 
-      with {:ok, tokens} <- OpenIDConnect.fetch_tokens(config, token_params),
-           {:ok, claims} <- OpenIDConnect.verify(config, tokens["id_token"]) do
-      case UserFromAuth.find_or_create(provider_id, claims) do
-        {:ok, user} ->
-          # only first-time connect will include refresh token
-          # XXX: Remove this when SCIM 2.0 is implemented
-          with %{"refresh_token" => refresh_token} <- tokens do
-            FzHttp.Auth.OIDC.create_connection(user.id, provider_id, refresh_token)
+      case OpenIDConnect.fetch_tokens(config, token_params) do
+        {:ok, tokens} ->
+          case OpenIDConnect.verify(config, tokens["id_token"]) do
+            {:ok, claims} ->
+              case UserFromAuth.find_or_create(provider_id, claims) do
+                {:ok, user} ->
+                  # only first-time connect will include refresh token
+                  # XXX: Remove this when SCIM 2.0 is implemented
+                  with %{"refresh_token" => refresh_token} <- tokens do
+                    FzHttp.Auth.OIDC.create_connection(user.id, provider_id, refresh_token)
+                  end
+
+                  conn
+                  |> put_session("id_token", tokens["id_token"])
+                  |> do_sign_in(user, %{provider: provider_id})
+
+                {:error, reason} ->
+                  conn
+                  |> put_flash(:error, "Error signing in: #{reason}")
+                  |> redirect(to: ~p"/")
+              end
+
+            {:error, error} ->
+              msg = "An OpenIDConnect error occurred. Details: #{inspect(error)}"
+              Logger.error(msg)
+
+              conn
+              |> put_flash(:error, msg)
+              |> redirect(to: ~p"/")
           end
 
-          conn
-          |> put_session("id_token", tokens["id_token"])
-          |> do_sign_in(user, %{provider: provider_id})
+        {:error, error} ->
+          msg = "An OpenIDConnect error occurred. Details: #{inspect(error)}"
+          Logger.error(msg)
 
-        {:error, reason} ->
           conn
-          |> put_flash(:error, "Error signing in: #{reason}")
+          |> put_flash(:error, msg)
           |> redirect(to: ~p"/")
       end
     else
-      # Error verifying state, claims or fetching tokens
+      # Error verifying state
       {:error, error} ->
         msg = "An OpenIDConnect error occurred. Details: #{inspect(error)}"
         Logger.error(msg)
