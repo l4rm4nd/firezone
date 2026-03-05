@@ -61,15 +61,16 @@ defmodule FzHttpWeb.AuthController do
 
   def oidc_callback(conn, %{"provider" => provider_id, "state" => state} = params)
       when is_binary(provider_id) do
-    token_params =
-      params
-      |> Map.merge(PKCE.token_params(conn))
-      |> Map.put("grant_type", "authorization_code")
-
     with :ok <- State.verify_state(conn, state),
-         {:ok, config} <- Auth.fetch_oidc_provider_config(provider_id),
-         {:ok, tokens} <- OpenIDConnect.fetch_tokens(config, token_params),
-         {:ok, claims} <- OpenIDConnect.verify(config, tokens["id_token"]) do
+         {:ok, config} <- Auth.fetch_oidc_provider_config(provider_id) do
+      token_params =
+        params
+        |> Map.merge(PKCE.token_params(conn))
+        |> Map.put("grant_type", "authorization_code")
+        |> Map.put("redirect_uri", config.redirect_uri)
+
+      with {:ok, tokens} <- OpenIDConnect.fetch_tokens(config, token_params),
+           {:ok, claims} <- OpenIDConnect.verify(config, tokens["id_token"]) do
       case UserFromAuth.find_or_create(provider_id, claims) do
         {:ok, user} ->
           # only first-time connect will include refresh token
