@@ -68,6 +68,7 @@ FROM ${RUNNER_IMAGE}
 # Install runtime dependencies
 RUN apk add -u --no-cache \
     nftables \
+    openssl \
     openssl-dev
 
 WORKDIR /app

@@ -6,6 +6,10 @@ source 'https://rubygems.org'
 gem 'chef', '~> 17.10.0'
 gem 'omnibus', '~> 8.3.2'
 
+# Security patches for transitive dependencies
+gem 'rack', '>= 2.2.22'
+gem 'faraday', '>= 1.10.5'
+
 # Use Chef"s software definitions. It is recommended that you write your own
 # software definitions, but you can clone/fork Chef"s to get you started.
 # gem "omnibus-software", github: "chef/omnibus-software"

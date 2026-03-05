@@ -6,8 +6,6 @@ x-deploy: &default-deploy
   update_config:
     order: start-first
 
-version: "3.7"
-
 services:
 
   firezone:
