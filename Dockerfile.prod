@@ -25,6 +25,10 @@ COPY apps/fz_vpn/mix.exs ./apps/fz_vpn/mix.exs
 COPY apps/fz_wall/mix.exs ./apps/fz_wall/mix.exs
 
 RUN mix deps.get --only $MIX_ENV
+
+# Patch openid_connect to use Jason instead of undefined JSON module
+RUN sed -i 's/JSON\.decode/Jason.decode/g' /app/deps/openid_connect/lib/openid_connect/document.ex
+
 RUN mkdir config
 
 # copy compile-time config files before we compile dependencies
