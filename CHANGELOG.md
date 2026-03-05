@@ -1,3 +1,10 @@
+## [7.1.6](https://github.com/l4rm4nd/firezone/compare/v7.1.5...v7.1.6) (2026-03-05)
+
+
+### Bug Fixes
+
+* validation errors ([7e2ca95](https://github.com/l4rm4nd/firezone/commit/7e2ca95b9fbd477b79b52fab68df2e402c272894))
+
 ## [7.1.5](https://github.com/l4rm4nd/firezone/compare/v7.1.4...v7.1.5) (2026-03-05)
 
 
@@ -25,11 +32,4 @@
 ### Bug Fixes
 
 * update Dockerfiles for Elixir 1.17.3, Erlang 27, and npm ([d7a09d1](https://github.com/l4rm4nd/firezone/commit/d7a09d1e3e390f42b5c1432432b2197b015b653c))
-
-## [7.1.1](https://github.com/l4rm4nd/firezone/compare/v7.1.0...v7.1.1) (2026-03-05)
-
-
-### Bug Fixes
-
-* add flash message rendering to admin layout ([5ee19c3](https://github.com/l4rm4nd/firezone/commit/5ee19c39195fc5148de422386f97cd9fda05476c))
 
