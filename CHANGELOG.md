@@ -1,3 +1,10 @@
+## [7.2.0](https://github.com/l4rm4nd/firezone/compare/v7.1.17...v7.2.0) (2026-03-05)
+
+
+### Features
+
+* bump dependencies ([043fee5](https://github.com/l4rm4nd/firezone/commit/043fee59a3256efc9e1d3203eca4b6fd1dfd2d6b))
+
 ## [7.1.17](https://github.com/l4rm4nd/firezone/compare/v7.1.16...v7.1.17) (2026-03-05)
 
 
@@ -25,11 +32,4 @@
 ### Bug Fixes
 
 * openid_connect grant type ([eba6d3b](https://github.com/l4rm4nd/firezone/commit/eba6d3b1cc6cb80a43d5670b133f5fc4f024e357))
-
-## [7.1.13](https://github.com/l4rm4nd/firezone/compare/v7.1.12...v7.1.13) (2026-03-05)
-
-
-### Bug Fixes
-
-* openid_connect ([0b403d5](https://github.com/l4rm4nd/firezone/commit/0b403d54a998551ad141d2649b085ef06583c14d))
 
