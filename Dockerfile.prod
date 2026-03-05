@@ -1,9 +1,7 @@
 ARG ELIXIR_VERSION=1.17.3
-# Use latest Alpine to match elixir:1.17.3-alpine base (which uses Alpine 3.21+)
-ARG ALPINE_VERSION=3.21
 
 ARG BUILDER_IMAGE="elixir:${ELIXIR_VERSION}-alpine"
-ARG RUNNER_IMAGE="alpine:${ALPINE_VERSION}"
+ARG RUNNER_IMAGE="elixir:${ELIXIR_VERSION}-alpine"
 
 FROM ${BUILDER_IMAGE} as builder
 
@@ -62,12 +60,10 @@ RUN mix release
 # the compiled release and other runtime necessities
 FROM ${RUNNER_IMAGE}
 
-# Install runtime dependencies - ensure OpenSSL libs match what was used during build
+# Install runtime dependencies
 RUN apk add -u --no-cache \
     nftables \
-    libstdc++ \
-    ncurses-libs \
-    openssl
+    openssl-dev
 
 WORKDIR /app
 
