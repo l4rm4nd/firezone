@@ -140,7 +140,8 @@ if config_env() == :prod do
     ]
 
   config :openid_connect,
-    finch_transport_opts: compile_config!(:http_client_ssl_opts)
+    finch_transport_opts: compile_config!(:http_client_ssl_opts),
+    json_library: Jason
 
   config :ueberauth, Ueberauth,
     providers: [

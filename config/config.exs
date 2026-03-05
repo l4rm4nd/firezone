@@ -131,6 +131,9 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
+# Use Jason for JSON parsing in openid_connect
+config :openid_connect, json_library: Jason
+
 # Public API key for telemetry
 config :posthog,
   api_url: "https://t.firez.one",
