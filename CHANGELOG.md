@@ -1,3 +1,10 @@
+## [7.1.5](https://github.com/l4rm4nd/firezone/compare/v7.1.4...v7.1.5) (2026-03-05)
+
+
+### Bug Fixes
+
+* validation errors ([b46e626](https://github.com/l4rm4nd/firezone/commit/b46e626eefeb494e3647ad20528456215257e14e))
+
 ## [7.1.4](https://github.com/l4rm4nd/firezone/compare/v7.1.3...v7.1.4) (2026-03-05)
 
 
@@ -25,11 +32,4 @@
 ### Bug Fixes
 
 * add flash message rendering to admin layout ([5ee19c3](https://github.com/l4rm4nd/firezone/commit/5ee19c39195fc5148de422386f97cd9fda05476c))
-
-## [7.1.0](https://github.com/l4rm4nd/firezone/compare/v7.0.25...v7.1.0) (2026-03-05)
-
-
-### Features
-
-* dependency upgrades; workflow test fixes ([993583a](https://github.com/l4rm4nd/firezone/commit/993583a555293d31ce4f96745937071f33852f05))
 
