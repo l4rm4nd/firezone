@@ -1,3 +1,10 @@
+## [7.1.9](https://github.com/l4rm4nd/firezone/compare/v7.1.8...v7.1.9) (2026-03-05)
+
+
+### Bug Fixes
+
+* sync dockerfile stages openssl ([93fb50c](https://github.com/l4rm4nd/firezone/commit/93fb50c1c8549660e6822e13c23443d74ac829af))
+
 ## [7.1.8](https://github.com/l4rm4nd/firezone/compare/v7.1.7...v7.1.8) (2026-03-05)
 
 
@@ -25,11 +32,4 @@
 ### Bug Fixes
 
 * validation errors ([b46e626](https://github.com/l4rm4nd/firezone/commit/b46e626eefeb494e3647ad20528456215257e14e))
-
-## [7.1.4](https://github.com/l4rm4nd/firezone/compare/v7.1.3...v7.1.4) (2026-03-05)
-
-
-### Bug Fixes
-
-* trigger ci ([f62642c](https://github.com/l4rm4nd/firezone/commit/f62642c84bdf3513f86f82d2f72e1989161080ab))
 
