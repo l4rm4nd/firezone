@@ -1,3 +1,10 @@
+## [7.1.16](https://github.com/l4rm4nd/firezone/compare/v7.1.15...v7.1.16) (2026-03-05)
+
+
+### Bug Fixes
+
+* syntax error ([b5448ba](https://github.com/l4rm4nd/firezone/commit/b5448ba84291514a0a9c84df2736f91538927c7a))
+
 ## [7.1.15](https://github.com/l4rm4nd/firezone/compare/v7.1.14...v7.1.15) (2026-03-05)
 
 
@@ -25,11 +32,4 @@
 ### Bug Fixes
 
 * jason for openid_connect ([854543a](https://github.com/l4rm4nd/firezone/commit/854543a6b0a3beb9a55ceef91d95900b0a041a47))
-
-## [7.1.11](https://github.com/l4rm4nd/firezone/compare/v7.1.10...v7.1.11) (2026-03-05)
-
-
-### Bug Fixes
-
-* jason for openid_connect ([b3f5d57](https://github.com/l4rm4nd/firezone/commit/b3f5d57bd67c84d8a1ced61d64e75b0507508a3c))
 
