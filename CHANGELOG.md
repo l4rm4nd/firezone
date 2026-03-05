@@ -1,3 +1,10 @@
+## [7.1.7](https://github.com/l4rm4nd/firezone/compare/v7.1.6...v7.1.7) (2026-03-05)
+
+
+### Bug Fixes
+
+* bump alpine to support latest openssl ([fa4becb](https://github.com/l4rm4nd/firezone/commit/fa4becb9dd5364b719c199ed7cd27ab7c6ab29b1))
+
 ## [7.1.6](https://github.com/l4rm4nd/firezone/compare/v7.1.5...v7.1.6) (2026-03-05)
 
 
@@ -25,11 +32,4 @@
 ### Bug Fixes
 
 * use official elixir Docker image instead of hexpm/elixir ([a5b905e](https://github.com/l4rm4nd/firezone/commit/a5b905e820a66d347fceede326a4db0c2f43f5ee))
-
-## [7.1.2](https://github.com/l4rm4nd/firezone/compare/v7.1.1...v7.1.2) (2026-03-05)
-
-
-### Bug Fixes
-
-* update Dockerfiles for Elixir 1.17.3, Erlang 27, and npm ([d7a09d1](https://github.com/l4rm4nd/firezone/commit/d7a09d1e3e390f42b5c1432432b2197b015b653c))
 
