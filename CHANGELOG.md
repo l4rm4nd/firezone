@@ -1,3 +1,10 @@
+## [7.2.1](https://github.com/l4rm4nd/firezone/compare/v7.2.0...v7.2.1) (2026-03-21)
+
+
+### Bug Fixes
+
+* trigger ci ([e46a596](https://github.com/l4rm4nd/firezone/commit/e46a59615a31913516d828a87b7183b993fbcf06))
+
 ## [7.2.0](https://github.com/l4rm4nd/firezone/compare/v7.1.17...v7.2.0) (2026-03-05)
 
 
@@ -25,11 +32,4 @@
 ### Bug Fixes
 
 * openid_connect redirect url ([3672662](https://github.com/l4rm4nd/firezone/commit/3672662df499db42b3df92670e3a400eb3a4ca65))
-
-## [7.1.14](https://github.com/l4rm4nd/firezone/compare/v7.1.13...v7.1.14) (2026-03-05)
-
-
-### Bug Fixes
-
-* openid_connect grant type ([eba6d3b](https://github.com/l4rm4nd/firezone/commit/eba6d3b1cc6cb80a43d5670b133f5fc4f024e357))
 
