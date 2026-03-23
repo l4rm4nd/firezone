@@ -69,7 +69,7 @@ jobs:
           # XXX: This can fail when coveralls is down
           mix coveralls.github --umbrella --warnings-as-errors
       - name: Test Report
-        uses: dorny/test-reporter@v2
+        uses: dorny/test-reporter@v3
         if: ${{ github.event.pull_request.head.repo.full_name == github.repository && (success() || failure()) }}
         with:
           name: Elixir Unit Test Report
@@ -386,7 +386,7 @@ jobs:
           name: screenshots
           path: apps/fz_http/screenshots
       - name: Test Report
-        uses: dorny/test-reporter@v2
+        uses: dorny/test-reporter@v3
         if: ${{ github.event.pull_request.head.repo.full_name == github.repository && (success() || failure()) }}
         with:
           name: Elixir Acceptance Test Report
