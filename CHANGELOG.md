@@ -1,3 +1,10 @@
+## [7.2.3](https://github.com/l4rm4nd/firezone/compare/v7.2.2...v7.2.3) (2026-04-03)
+
+
+### Bug Fixes
+
+* trigger ci ([84e3b49](https://github.com/l4rm4nd/firezone/commit/84e3b49b8af3713349e642fdc852f3545a8cb832))
+
 ## [7.2.2](https://github.com/l4rm4nd/firezone/compare/v7.2.1...v7.2.2) (2026-04-03)
 
 
@@ -25,11 +32,4 @@
 ### Bug Fixes
 
 * openid_connect ([4fcdf2c](https://github.com/l4rm4nd/firezone/commit/4fcdf2c0d0168445c1bc11b945ecaf7505920708))
-
-## [7.1.16](https://github.com/l4rm4nd/firezone/compare/v7.1.15...v7.1.16) (2026-03-05)
-
-
-### Bug Fixes
-
-* syntax error ([b5448ba](https://github.com/l4rm4nd/firezone/commit/b5448ba84291514a0a9c84df2736f91538927c7a))
 
