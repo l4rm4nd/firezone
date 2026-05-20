@@ -46,7 +46,7 @@ Firezone is **not:**
 
 Firezone can be installed via Docker and Docker Compose.
 
-A public Docker image is provided on [DockerHub](https://hub.docker.com/r/l4rm4nd/firezone).
+A public Docker image is provided on [DockerHub](https://hub.docker.com/r/l4rm4nd/firezone). Both architectures x64 and ARM64 are supported.
 
 ````bash
 # download compose file
