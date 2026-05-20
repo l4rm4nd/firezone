@@ -9,7 +9,7 @@ x-deploy: &default-deploy
 services:
 
   firezone:
-    image: l4rm4nd/firezone:7.2.x-arm64
+    image: l4rm4nd/firezone:7.2.x # or for arm: l4rm4nd/firezone:7.2.x-arm64
     build:
       context: .
       dockerfile: Dockerfile.prod
