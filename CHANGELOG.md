@@ -1,3 +1,10 @@
+## [7.2.9](https://github.com/l4rm4nd/firezone/compare/v7.2.8...v7.2.9) (2026-05-20)
+
+
+### Bug Fixes
+
+* trigger ci with arm64 ([7d7fcae](https://github.com/l4rm4nd/firezone/commit/7d7fcae07cc4695643d0bcc6e7214b4fbb81105b))
+
 ## [7.2.8](https://github.com/l4rm4nd/firezone/compare/v7.2.7...v7.2.8) (2026-05-13)
 
 
@@ -25,11 +32,4 @@
 ### Bug Fixes
 
 * trigger ci ([cd0723a](https://github.com/l4rm4nd/firezone/commit/cd0723a1b25a3a674ce453d5cf85ce675ee6c85b))
-
-## [7.2.4](https://github.com/l4rm4nd/firezone/compare/v7.2.3...v7.2.4) (2026-04-08)
-
-
-### Bug Fixes
-
-* trigger ci ([e571cca](https://github.com/l4rm4nd/firezone/commit/e571cca21e4a901a4cc65a9dd7fc71fd1a9cb26d))
 
