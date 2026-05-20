@@ -9,6 +9,7 @@ x-deploy: &default-deploy
 services:
 
   firezone:
+    image: l4rm4nd/firezone:7.2.x-arm64
     build:
       context: .
       dockerfile: Dockerfile.prod
@@ -47,12 +48,12 @@ services:
     # #- traefik.http.routers.firezone.middlewares=local-ipwhitelist@file
 
   postgres:
-    image: postgres:15-alpine
+    image: postgres:18-alpine
     container_name: firezone-db
-    ports:
-      - "5433:5432"
+    expose:
+      - 5432
     volumes:
-      - ${DOCKER_VOLUME_STORAGE:-/mnt/docker-volumes}/firezone/db:/var/lib/postgresql/data
+      - ${DOCKER_VOLUME_STORAGE:-/mnt/docker-volumes}/firezone/db:/var/lib/postgresql
     environment:
       POSTGRES_DB: ${DATABASE_NAME:-firezone}
       POSTGRES_USER: ${DATABASE_USER:-postgres}
