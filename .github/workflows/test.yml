@@ -303,7 +303,7 @@ jobs:
           - 8400:8080/tcp
           - 8443:8443/tcp
     steps:
-      - uses: nanasess/setup-chromedriver@v2
+      - uses: nanasess/setup-chromedriver@v3
       - run: |
           export DISPLAY=:99
           sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 &
