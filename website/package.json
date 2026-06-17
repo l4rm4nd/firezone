@@ -29,7 +29,7 @@
     "next": "^15.5.18",
     "next-hubspot": "^2.0.1",
     "next-sitemap": "^4.2.3",
-    "postcss": "^8.5.12",
+    "postcss": "^8.5.13",
     "posthog-js": "^1.358.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -50,6 +50,6 @@
     "typescript": "^5.7.3"
   },
   "overrides": {
-    "dompurify": "^3.4.0"
+    "dompurify": "^3.4.10"
   }
 }
