@@ -1,10 +1,10 @@
 services:
 
   postgres:
-    image: postgres:15-alpine
+    image: postgres:16-alpine
     container_name: firezone-db-dev
-    ports:
-      - "5432:5432"
+    #ports:
+    #  - "5432:5432"
     environment:
       POSTGRES_DB: firezone_dev
       POSTGRES_USER: postgres
