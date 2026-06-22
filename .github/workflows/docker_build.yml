@@ -26,7 +26,7 @@ jobs:
       version: ${{ steps.changelog.outputs.version }}
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7.0.0
 
       - name: Conventional Changelog Action
         id: changelog
@@ -49,7 +49,7 @@ jobs:
 
     steps:
 
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7.0.0
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
       - name: Set up Docker Buildx
@@ -109,7 +109,7 @@ jobs:
 
     steps:
 
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7.0.0
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
@@ -161,7 +161,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
   
       - name: Debug Changelog Outputs
         run: echo ${{ needs.changelog.outputs.tag }}
