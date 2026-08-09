@@ -1,3 +1,10 @@
+## [7.2.17](https://github.com/l4rm4nd/firezone/compare/v7.2.16...v7.2.17) (2026-08-09)
+
+
+### Bug Fixes
+
+* trigger ci ([94e79b8](https://github.com/l4rm4nd/firezone/commit/94e79b8cd91b8432ad4607338afc338888e71383))
+
 ## [7.2.16](https://github.com/l4rm4nd/firezone/compare/v7.2.15...v7.2.16) (2026-07-27)
 
 
@@ -25,11 +32,4 @@
 ### Bug Fixes
 
 * bump libs ([a62d989](https://github.com/l4rm4nd/firezone/commit/a62d9894a00df2e5365b6c2a4334c98a9109b4bb))
-
-## [7.2.12](https://github.com/l4rm4nd/firezone/compare/v7.2.11...v7.2.12) (2026-06-17)
-
-
-### Bug Fixes
-
-* bump dompurify; trigger ci ([693de16](https://github.com/l4rm4nd/firezone/commit/693de169426b4ed411d92adc65b93208060ee0b3))
 
