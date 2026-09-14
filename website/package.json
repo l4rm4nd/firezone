@@ -29,7 +29,7 @@
     "next": "^15.5.25",
     "next-hubspot": "^2.0.1",
     "next-sitemap": "^4.2.3",
-    "postcss": "^8.5.17",
+    "postcss": "^8.5.28",
     "posthog-js": "^1.407.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -51,8 +51,8 @@
   },
   "overrides": {
     "dompurify": "^3.4.13",
-    "sharp": "^0.35.3",
-    "postcss": "^8.5.17",
+    "sharp": "^0.35.4",
+    "postcss": "^8.5.28",
     "protobufjs": "7.6.4",
     "@opentelemetry/core": "^2.6.0"
   }

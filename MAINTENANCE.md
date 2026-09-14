@@ -184,11 +184,12 @@ When a transitive dep has a CVE, use the `overrides` field in `website/package.j
 
 Then run `npm install` to regenerate `package-lock.json`.
 
-### Version reference (last updated 2026-06-24)
+### Version reference (last updated 2026-09-14)
 
 | Package | Version | Notes |
 |---|---|---|
-| `postcss` | `^8.5.15` | XSS via unescaped `</style>` |
+| `postcss` | `^8.5.28` | Incomplete fix of GHSA-6g55-p6wh-862q — arbitrary `.map` file read via `sourceMappingURL` when `from` is unset (GHSA-fxqj-rqcc-2cmp) |
+| `sharp` | `^0.35.4` (override) | Bundled libheif RCE/heap issues (GHSA-g89c-p67h-r497, GHSA-2jg2-4ch7-h545) |
 | `dompurify` | `^3.4.11` (override) | ALLOWED_ATTR pollution via `setConfig()` |
 | `next` | `^15.5.19` | Latest 15.x stable |
 
