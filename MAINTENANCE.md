@@ -149,6 +149,7 @@ Then run `bundle update <gem>` to regenerate the lockfile.
 | `rack` | `>= 2.2.22` | CVE multipart parsing |
 | `faraday` | `>= 2.12.2` | NestedParamsEncoder DoS |
 | `concurrent-ruby` | `>= 1.3.5` | AtomicReference NaN livelock + RWLock bugs |
+| `rubyzip` | `>= 2.4.1, < 3.0` | Path traversal (chef requires `< 3.0`) |
 
 ---
 
@@ -190,7 +191,7 @@ Then run `npm install` to regenerate `package-lock.json`.
 |---|---|---|
 | `postcss` | `^8.5.28` | Incomplete fix of GHSA-6g55-p6wh-862q — arbitrary `.map` file read via `sourceMappingURL` when `from` is unset (GHSA-fxqj-rqcc-2cmp) |
 | `sharp` | `^0.35.4` (override) | Bundled libheif RCE/heap issues (GHSA-g89c-p67h-r497, GHSA-2jg2-4ch7-h545) |
-| `dompurify` | `^3.4.11` (override) | ALLOWED_ATTR pollution via `setConfig()` |
+| `dompurify` | `^3.4.16` (override) | ALLOWED_ATTR pollution via `setConfig()`; IN_PLACE afterSanitize hook DOM XSS |
 | `next` | `^15.5.19` | Latest 15.x stable |
 
 > **Known limitation:** `next@15.x` bundles its own `postcss@8.4.31` internally
