@@ -185,14 +185,21 @@ When a transitive dep has a CVE, use the `overrides` field in `website/package.j
 
 Then run `npm install` to regenerate `package-lock.json`.
 
-### Version reference (last updated 2026-09-14)
+### Version reference (last updated 2026-10-08)
 
 | Package | Version | Notes |
 |---|---|---|
 | `postcss` | `^8.5.28` | Incomplete fix of GHSA-6g55-p6wh-862q — arbitrary `.map` file read via `sourceMappingURL` when `from` is unset (GHSA-fxqj-rqcc-2cmp) |
 | `sharp` | `^0.35.4` (override) | Bundled libheif RCE/heap issues (GHSA-g89c-p67h-r497, GHSA-2jg2-4ch7-h545) |
 | `dompurify` | `^3.4.16` (override) | ALLOWED_ATTR pollution via `setConfig()`; IN_PLACE afterSanitize hook DOM XSS |
-| `next` | `^15.5.19` | Latest 15.x stable |
+| `next` | `^15.5.27` | Cache poisoning in SSG/ISR (fixed in 15.5.27) |
+| `postcss-selector-parser` | `^7.1.6` (override) | Quadratic complexity CPU exhaustion |
+| `seroval` / `sharp` / `source-map-js` | `1.6.8` / `0.35.5` / `1.2.2` | Via `npm audit fix` (lockfile only) |
+
+> **Known limitation (braces):** `braces <= 3.0.3` (GHSA-vfj7-8cjw-p6xm, stack-exhaustion DoS)
+> has no patched release. It is only used by build tooling (`micromatch`, `chokidar`,
+> `next-sitemap`). Dismiss the alert as "no fix / not exploitable" or wait for upstream.
+> Likewise `phoenix` in `apps/fz_http/assets` (GHSA-63mc-hw7g-86rr) has no fix available.
 
 > **Known limitation:** `next@15.x` bundles its own `postcss@8.4.31` internally
 > (used for its CSS compiler, not user code). npm audit flags this as
