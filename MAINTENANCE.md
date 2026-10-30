@@ -142,14 +142,27 @@ gem 'concurrent-ruby', '>= 1.3.5'
 
 Then run `bundle update <gem>` to regenerate the lockfile.
 
-### Version reference (last updated 2026-06-24)
+### Version reference (last updated 2026-10-30)
 
 | Gem | Pinned to | Reason |
 |---|---|---|
 | `rack` | `>= 2.2.22` | CVE multipart parsing |
 | `faraday` | `>= 2.12.2` | NestedParamsEncoder DoS |
 | `concurrent-ruby` | `>= 1.3.5` | AtomicReference NaN livelock + RWLock bugs |
-| `rubyzip` | `>= 2.4.1, < 3.0` | Path traversal (chef requires `< 3.0`) |
+| `rubyzip` | `>= 2.4.1, < 3.0` | Path traversal CVE-2026-85396 — **still affected**, see note below |
+
+> **Known limitation (rubyzip):** CVE-2026-85396 / GHSA-47m2-wp7j-p9vc (High,
+> path traversal in `Zip::Entry#extract` via sibling-directory prefix) affects
+> every release below 3.4.0 — **including 2.4.1**, so the pin above is only a
+> best-effort hold at the newest 2.x. The fix is **rubyzip >= 3.4.0 only**
+> (no 2.x backport as of 2026-10-30), and `chef 17.x` requires
+> `rubyzip < 3.0`, so the Dependabot alert cannot be remediated while on
+> chef 17. Exposure is build-time only (omnibus packaging of trusted
+> artifacts; `Zip::Entry#extract` is never called on untrusted archives).
+> Remediation path: migrate to `chef >= 18` — chef 18+ no longer depends on
+> rubyzip at all — in a dedicated maintenance window; the omnibus/chef
+> toolchain is version-sensitive, so do not bundle it into a security patch.
+> Until then, dismiss the alert as "no fix available / not exploitable".
 
 ---
 
@@ -185,21 +198,31 @@ When a transitive dep has a CVE, use the `overrides` field in `website/package.j
 
 Then run `npm install` to regenerate `package-lock.json`.
 
-### Version reference (last updated 2026-10-08)
+### Version reference (last updated 2026-10-30)
 
 | Package | Version | Notes |
 |---|---|---|
 | `postcss` | `^8.5.28` | Incomplete fix of GHSA-6g55-p6wh-862q — arbitrary `.map` file read via `sourceMappingURL` when `from` is unset (GHSA-fxqj-rqcc-2cmp) |
-| `sharp` | `^0.35.4` (override) | Bundled libheif RCE/heap issues (GHSA-g89c-p67h-r497, GHSA-2jg2-4ch7-h545) |
+| `sharp` | `^0.35.5` (override) | Bundled libheif RCE/heap issues (GHSA-g89c-p67h-r497, GHSA-2jg2-4ch7-h545); `>= 0.35.5` is also the workaround for GHSA-2464-fhr4-w9xw (Next Image Optimization memory RCE) |
 | `dompurify` | `^3.4.16` (override) | ALLOWED_ATTR pollution via `setConfig()`; IN_PLACE afterSanitize hook DOM XSS |
-| `next` | `^15.5.27` | Cache poisoning in SSG/ISR (fixed in 15.5.27) |
+| `next` | `^15.5.28` | Unauthenticated RCE in Image Optimization API with SVG (GHSA-2464-fhr4-w9xw, critical) + DoS in App Router Server Actions (GHSA-p3m5-59mp-jv5r, high) — both fixed in 15.5.28 |
 | `postcss-selector-parser` | `^7.1.6` (override) | Quadratic complexity CPU exhaustion |
-| `seroval` / `sharp` / `source-map-js` | `1.6.8` / `0.35.5` / `1.2.2` | Via `npm audit fix` (lockfile only) |
+| `seroval` / `sharp` / `source-map-js` | `1.6.12` / `0.35.5` / `1.2.2` | seroval bumped lockfile-only via `npm update` (`solid-js` allows `~1.6.8`): typed-array constructor code injection (GHSA-f86p-h4j2-7qgj, fixed 1.6.11) + RegExp script injection (GHSA-9wx9-5pv9-3349, fixed 1.6.10) |
 
 > **Known limitation (braces):** `braces <= 3.0.3` (GHSA-vfj7-8cjw-p6xm, stack-exhaustion DoS)
 > has no patched release. It is only used by build tooling (`micromatch`, `chokidar`,
 > `next-sitemap`). Dismiss the alert as "no fix / not exploitable" or wait for upstream.
 > Likewise `phoenix` in `apps/fz_http/assets` (GHSA-63mc-hw7g-86rr) has no fix available.
+
+> **Known limitation (deepmerge):** `deepmerge 4.2.0 - 4.3.1` (GHSA-gcqx-w48m-w2h4,
+> prototype poisoning in `mergeObject()`, low) has **no patched release** — 4.3.1
+> is the latest. It only reaches the tree through build tooling
+> (`@rollup/plugin-node-resolve` via `flowbite-datepicker` / `flowbite` /
+> `flowbite-react`) and merges trusted build config, so it is not exploitable
+> at runtime. `npm audit fix --force` would downgrade `flowbite` 2.5.2 -> 2.3.0
+> (a breaking change) — don't. Batch-fix in the next maintenance window once
+> upstream ships a patch (TehShrike/deepmerge#273); until then dismiss the
+> alert as "no fix available / not exploitable".
 
 > **Known limitation:** `next@15.x` bundles its own `postcss@8.4.31` internally
 > (used for its CSS compiler, not user code). npm audit flags this as

@@ -1,8 +1,8 @@
 // TODO: This error layout doesn't seem to be applied...
 
 import "@/app/globals.css";
-import { Source_Sans_Pro } from "next/font/google";
-const source_sans_pro = Source_Sans_Pro({
+import { Source_Sans_3 } from "next/font/google";
+const source_sans_pro = Source_Sans_3({
   subsets: ["latin"],
   weight: ["200", "300", "400", "600", "700", "900"],
 });

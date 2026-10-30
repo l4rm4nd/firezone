@@ -4,7 +4,7 @@ import { Tabs as FlowbiteTabs } from "flowbite-react";
 function TabsGroup({ children }: { children: React.ReactNode }) {
   return (
     <div className="mb-4">
-      <FlowbiteTabs.Group className="shadow">{children}</FlowbiteTabs.Group>
+      <FlowbiteTabs className="shadow">{children}</FlowbiteTabs>
     </div>
   );
 }

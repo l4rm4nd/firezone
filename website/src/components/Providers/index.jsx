@@ -3,7 +3,7 @@ import posthog from "posthog-js";
 import { PostHogProvider } from "posthog-js/react";
 import { HubspotProvider } from "next-hubspot";
 import { usePathname, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 
 if (typeof window !== "undefined") {
   posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY, {
@@ -11,7 +11,9 @@ if (typeof window !== "undefined") {
   });
 }
 
-export default function Provider({ children }) {
+// Tracks pageviews. Kept in its own component so the `useSearchParams()` call
+// sits behind a Suspense boundary, which is required for static prerendering.
+function PageViewTracker() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   // Track pageviews
@@ -27,9 +29,16 @@ export default function Provider({ children }) {
     }
   }, [pathname, searchParams]);
 
+  return null;
+}
+
+export default function Provider({ children }) {
   return (
     <>
       <PostHogProvider client={posthog}>
+        <Suspense>
+          <PageViewTracker />
+        </Suspense>
         <HubspotProvider>{children}</HubspotProvider>
       </PostHogProvider>
     </>
