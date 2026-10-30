@@ -1,3 +1,10 @@
+## [7.2.25](https://github.com/l4rm4nd/firezone/compare/v7.2.24...v7.2.25) (2026-10-30)
+
+
+### Bug Fixes
+
+* bump libs fix cves ([0b5b979](https://github.com/l4rm4nd/firezone/commit/0b5b9797f5825f9bcfc522ef384e64a9c9dcfecf))
+
 ## [7.2.24](https://github.com/l4rm4nd/firezone/compare/v7.2.23...v7.2.24) (2026-10-08)
 
 
@@ -25,11 +32,4 @@
 ### Bug Fixes
 
 * trigger ci ([53deeec](https://github.com/l4rm4nd/firezone/commit/53deeec61c929d9c4afecf28074e1136c2d707fd))
-
-## [7.2.20](https://github.com/l4rm4nd/firezone/compare/v7.2.19...v7.2.20) (2026-09-04)
-
-
-### Bug Fixes
-
-* trigger ci ([952da2a](https://github.com/l4rm4nd/firezone/commit/952da2af3c98643a6559b0f2a6ab711bf28fa162))
 
