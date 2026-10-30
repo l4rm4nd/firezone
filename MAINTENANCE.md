@@ -230,6 +230,32 @@ Then run `npm install` to regenerate `package-lock.json`.
 > The top-level `postcss` (8.5.15) used by Tailwind/your pipeline is patched.
 > Monitor <https://github.com/advisories/GHSA-qx2v-qp2m-jg93> for a 15.x backport.
 
+> **Next.js 16 readiness (assessed 2026-10-30, trial build against `next@16.4.3`):**
+> The upgrade is **low-risk** for this site — a trial build compiled and
+> prerendered all 67 pages with **zero source changes**. Findings:
+> - Requirements met: Node >= 20.9 (nvm 20.19.6+), TypeScript >= 5.1 (we have 5.7).
+>   No dynamic routes, no server `params`/`searchParams`/`headers()`/`cookies()`,
+>   no middleware, no AMP, `images.remotePatterns` already used — none of the
+>   v16 breaking changes apply.
+> - Ecosystem peers OK: `@next/mdx@16` (same version line), `next-hubspot`
+>   (`^16`), `next-sitemap 4.2.3` (`next: *`, postbuild verified against 16
+>   output), `flowbite-react` (`react >= 18`), `posthog-js` (`react >= 16.8`).
+> - **Blocker (Turbopack, the new default bundler):** our MDX config passes a
+>   custom `content(node)` function to `rehype-autolink-headings` in
+>   `next.config.js` — Turbopack requires serializable loader options.
+>   Workaround: `next build --webpack` / `next dev --webpack` (verified green).
+>   Proper fix: extract the anchor-icon logic into a serializable plugin file.
+> - React 18.3.1 still works in 16 (peer range allows `^18.2.0`) but logs a
+>   deprecation warning — React 18 support is removed in Next 17, so plan a
+>   separate `react@19` bump (+ `@types/react(-dom)`) and UI regression test.
+> - `next lint` is removed in 16 — drop or replace the `"lint"` npm script
+>   (site has no ESLint config anyway). `next build` auto-migrates
+>   `tsconfig.json` (`moduleResolution: "bundler"`, `jsx: "react-jsx"`,
+>   `.next/dev/types` include) — commit the generated diff.
+> - Bonus: upgrading to `next@16.3.0+` also clears the "next@15.x internal
+>   postcss" known limitation above, and 16.4.1+ carries the
+>   GHSA-2464-fhr4-w9xw / GHSA-p3m5-59mp-jv5r security fixes.
+
 ---
 
 ## Update Frontend Assets (fz_http)
