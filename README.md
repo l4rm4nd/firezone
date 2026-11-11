@@ -21,7 +21,7 @@ Firezone is a self-hosted VPN server and Linux firewall:
 
 ![Firezone Architecture](https://user-images.githubusercontent.com/52545545/183804397-ae81ca4e-6972-41f9-80d4-b431a077119d.png) 
 
-## 💎 Features
+## 💎 Features 
 
 - **Fast:** Uses WireGuard® to be
   [3-4 times](https://wireguard.com/performance/) faster than OpenVPN.
