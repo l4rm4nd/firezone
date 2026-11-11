@@ -249,7 +249,7 @@ GEM
       coderay (~> 1.1)
       method_source (~> 1.0)
     public_suffix (7.0.5)
-    rack (2.2.23)
+    rack (2.2.25)
     rainbow (3.1.1)
     regexp_parser (2.5.0)
     retryable (3.0.5)
